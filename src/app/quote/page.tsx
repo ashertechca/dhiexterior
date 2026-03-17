@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   CheckCircle,
   ArrowRight,
@@ -103,22 +104,35 @@ export default function QuotePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#FAFAF8] py-20 px-4">
-      <div className="max-w-7xl mx-auto pt-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C62828]/30 bg-[#C62828]/10 mb-6">
-            <Wrench className="w-4 h-4 text-[#C62828]" />
-            <span className="text-[#C62828] text-sm font-medium">Free Quote</span>
+    <main className="min-h-screen bg-[#FAFAF8]">
+      {/* Dark Hero */}
+      <section className="relative py-28 md:py-36 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&q=80"
+            alt="Request a quote"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        </div>
+        <div className="relative z-10 text-center px-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm mb-6">
+            <Wrench className="w-4 h-4 text-white" />
+            <span className="text-white text-sm font-medium">Free Quote</span>
           </div>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl text-[#1A1F2E] mb-4">
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">
             Request a Quote
           </h1>
-          <p className="text-[#6B7280] text-lg max-w-2xl mx-auto">
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
             Tell us about your project and we&apos;ll provide a detailed, no-obligation estimate.
           </p>
         </div>
+      </section>
 
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Main Form */}
           <div className="flex-1">
