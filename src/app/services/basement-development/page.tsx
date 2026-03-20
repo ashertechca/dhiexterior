@@ -114,20 +114,20 @@ const faqs = [
 export default function BasementDevelopmentPage() {
   return (
     <ServicePageContent
-      heroImage="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&q=80"
+      heroImage="/Basement-Remodeling.jpg"
       heroTag="Our Services"
       heroTitle={
         <>
           Professional{" "}
-          <span className="text-[#E53935]">Basement Development</span> in Calgary
+          <span className="text-[#E53935]">Basement Development</span> in
+          Calgary
         </>
       }
       heroDescription="Unlock your home's full potential with a professionally developed basement. From legal rental suites to custom family spaces, DHI Exteriors handles every detail from permits to finishing touches."
       benefitsTag="What's Included"
       benefitsTitle={
         <>
-          Complete{" "}
-          <span className="gradient-text">Basement Solutions</span>
+          Complete <span className="gradient-text">Basement Solutions</span>
         </>
       }
       benefits={benefits}

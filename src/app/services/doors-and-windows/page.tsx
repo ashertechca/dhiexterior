@@ -115,7 +115,7 @@ const faqs = [
 export default function DoorsAndWindowsPage() {
   return (
     <ServicePageContent
-      heroImage="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80"
+      heroImage="/doors-windows.jpg"
       heroTag="Our Services"
       heroTitle={
         <>

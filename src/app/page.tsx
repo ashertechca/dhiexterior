@@ -23,20 +23,12 @@ import { staggerContainer, staggerItem, slideFromLeft, slideFromRight } from "@/
 
 const services = [
   {
-    icon: Paintbrush,
-    name: "Painting",
+    icon: HardHat,
+    name: "Basement Development",
     description:
-      "Expert interior & exterior painting with premium finishes that withstand Calgary's harsh climate",
-    href: "/services/painting",
-    image: "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80",
-  },
-  {
-    icon: DoorOpen,
-    name: "Doors & Windows",
-    description:
-      "Energy-efficient upgrades that enhance security, style, and insulation year-round",
-    href: "/services/doors-and-windows",
-    image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80",
+      "Complete basement transformations with separate entrances, plumbing, and premium finishes",
+    href: "/services/basement-development",
+    image: "/Basement-Remodeling.jpg",
   },
   {
     icon: Fence,
@@ -44,7 +36,23 @@ const services = [
     description:
       "Custom-designed outdoor living spaces built to entertain and endure",
     href: "/services/decks-and-fences",
-    image: "https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=600&q=80",
+    image: "/deck-fence.png",
+  },
+  {
+    icon: Paintbrush,
+    name: "Painting",
+    description:
+      "Expert interior & exterior painting with premium finishes that withstand Calgary's harsh climate",
+    href: "/services/painting",
+    image: "/exterior-painting.png",
+  },
+  {
+    icon: DoorOpen,
+    name: "Doors & Windows",
+    description:
+      "Energy-efficient upgrades that enhance security, style, and insulation year-round",
+    href: "/services/doors-and-windows",
+    image: "/doors-windows.jpg",
   },
   {
     icon: Home,
@@ -52,15 +60,7 @@ const services = [
     description:
       "Protective cladding solutions that insulate, beautify, and defend against the elements",
     href: "/services/siding-and-eaves",
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
-  },
-  {
-    icon: HardHat,
-    name: "Basement Development",
-    description:
-      "Complete basement transformations with separate entrances, plumbing, and premium finishes",
-    href: "/services/basement-development",
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+    image: "/medium-rain-gutter-system-for-the-roof-of-the-house.jpg",
   },
 ];
 
@@ -131,143 +131,143 @@ export default function HomePage() {
       {/* ===== HERO SECTION ===== */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        className="relative bg-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden"
       >
-        {/* Background image with parallax */}
-        <motion.div className="absolute inset-0 z-0" style={{ y: heroY }}>
-          <Image
-            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80"
-            alt="Beautiful renovated home exterior"
-            fill
-            className="object-cover ken-burns"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-        </motion.div>
-
-        <motion.div
-          className="relative z-10 max-w-5xl mx-auto px-6 text-center"
-          style={{ opacity: heroOpacity }}
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8">
-              Calgary&apos;s Trusted Experts Since 2004
-              <ArrowRight className="w-4 h-4" />
-            </span>
-          </motion.div>
-
-          <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white text-balance"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            <span>Transforming Homes with</span>
-            <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
-              &nbsp;
-              {titles.map((title, index) => (
-                <motion.span
-                  key={index}
-                  className="absolute font-semibold text-[#E53935]"
-                  initial={{ opacity: 0, y: "-100" }}
-                  transition={{ type: "spring", stiffness: 50 }}
-                  animate={
-                    titleNumber === index
-                      ? { y: 0, opacity: 1 }
-                      : { y: titleNumber > index ? -150 : 150, opacity: 0 }
-                  }
-                >
-                  {title}
-                </motion.span>
-              ))}
-            </span>
-          </motion.h1>
-
-          <motion.p
-            className="text-lg md:text-xl leading-relaxed text-white/80 max-w-2xl mx-auto mt-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            Premium exterior renovations backed by 20+ years of craftsmanship.
-            We treat every home like it&apos;s our own.
-          </motion.p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            <Link
-              href="/quote"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#C62828] text-white font-semibold text-lg hover:bg-[#9B1F1F] transition-all shadow-lg shadow-red-900/30 hover:shadow-red-900/50 hover:-translate-y-1"
-            >
-              Get Your Free Quote
-            </Link>
-            <Link
-              href="/gallery"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-white/30 text-white font-semibold text-lg hover:border-white/60 hover:bg-white/10 transition-all"
-            >
-              View Our Work
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* Floating badges */}
-        <motion.div
-          className="absolute top-32 right-8 lg:right-16 z-10 hidden md:flex"
-          initial={{ opacity: 0, scale: 0.8, x: 20 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-        >
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-4 text-center">
-            <div className="flex items-center gap-1 justify-center mb-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-            <div className="text-white font-bold text-lg">4.8 Rating</div>
-            <div className="text-white/60 text-xs">on Google</div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-32 left-8 lg:left-16 z-10 hidden md:flex"
-          initial={{ opacity: 0, scale: 0.8, x: -20 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-        >
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#C62828]/30 flex items-center justify-center">
-              <CheckCircle2 className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <div className="text-white font-bold">20+ Years</div>
-              <div className="text-white/60 text-xs">Experience</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 z-10"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left — Text */}
             <motion.div
-              className="w-1.5 h-1.5 rounded-full bg-white"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            />
+              className="text-left"
+              style={{ opacity: heroOpacity }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C62828]/5 border border-[#C62828]/15 text-[#C62828] text-sm font-medium mb-8">
+                  Calgary&apos;s Trusted Experts Since 2004
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </motion.div>
+
+              <motion.h1
+                className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#1A1F2E] text-balance"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+              >
+                <span>Transforming Homes with</span>
+                <span className="relative flex w-full justify-start overflow-hidden md:pb-4 md:pt-1">
+                  &nbsp;
+                  {titles.map((title, index) => (
+                    <motion.span
+                      key={index}
+                      className="absolute font-semibold text-[#C62828]"
+                      initial={{ opacity: 0, y: "-100" }}
+                      transition={{ type: "spring", stiffness: 50 }}
+                      animate={
+                        titleNumber === index
+                          ? { y: 0, opacity: 1 }
+                          : { y: titleNumber > index ? -150 : 150, opacity: 0 }
+                      }
+                    >
+                      {title}
+                    </motion.span>
+                  ))}
+                </span>
+              </motion.h1>
+
+              <motion.p
+                className="text-lg md:text-xl leading-relaxed text-[#4A5568] max-w-xl mt-4"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                Premium exterior renovations backed by 20+ years of craftsmanship.
+                We treat every home like it&apos;s our own.
+              </motion.p>
+
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 mt-10"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <Link
+                  href="/quote"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#C62828] text-white font-semibold text-lg hover:bg-[#9B1F1F] transition-all shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1"
+                >
+                  Get Your Free Quote
+                </Link>
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-[#1A1F2E]/15 text-[#1A1F2E] font-semibold text-lg hover:border-[#1A1F2E]/30 hover:bg-[#1A1F2E]/5 transition-all"
+                >
+                  View Our Work
+                </Link>
+              </motion.div>
+
+              {/* Trust badges */}
+              <motion.div
+                className="flex items-center gap-6 mt-12"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1 }}
+              >
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-[#4A5568] ml-2 font-medium">4.8 on Google</span>
+                </div>
+                <div className="h-5 w-px bg-[#1A1F2E]/10" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#C62828]" />
+                  <span className="text-sm text-[#4A5568] font-medium">20+ Years Experience</span>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Right — Photo stack */}
+            <motion.div
+              className="relative h-[500px] md:h-[600px] hidden lg:block"
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              {[
+                { src: "/image-1.png", top: "0%", left: "0%", z: 10 },
+                { src: "/image-2.png", top: "3%", left: "33%", z: 20 },
+                { src: "/image-5.png", top: "28%", left: "5%", z: 30 },
+                { src: "/image-6.png", top: "30%", left: "38%", z: 40 },
+                { src: "/image-7.png", top: "56%", left: "0%", z: 15 },
+                { src: "/image-10.png", top: "58%", left: "33%", z: 25 },
+              ].map((photo, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-[55%] aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border-4 border-white cursor-pointer"
+                  style={{
+                    top: photo.top,
+                    left: photo.left,
+                    zIndex: photo.z,
+                  }}
+                  whileHover={{ scale: 1.05, zIndex: 50, y: -10 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={`Home renovation project ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    priority={i === 0}
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* ===== SERVICES GRID ===== */}
@@ -290,49 +290,54 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[280px] gap-4"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            {services.map((service) => {
+            {services.map((service, i) => {
               const Icon = service.icon;
+              // Bento layout: Basement (4col, 2row), Decks (2col, 2row), Painting (4col), Doors (2col), Siding (2col)
+              const spanClass = [
+                "md:col-span-4 lg:col-span-4 md:row-span-2",  // Basement — large hero
+                "md:col-span-2 lg:col-span-2 md:row-span-2",  // Decks — tall
+                "md:col-span-4 lg:col-span-4",                 // Painting — wide
+                "md:col-span-2 lg:col-span-2",                 // Doors & Windows — standard
+                "md:col-span-2 lg:col-span-2",                 // Siding & Eaves — standard
+              ][i];
               return (
                 <motion.div
                   key={service.name}
                   variants={staggerItem}
-                  className="group bg-white rounded-xl overflow-hidden border border-black/[0.06] hover:border-teal/40 hover:shadow-lg transition-all duration-500"
+                  className={`group relative rounded-2xl overflow-hidden border border-black/[0.06] hover:shadow-xl transition-all duration-500 ${spanClass}`}
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden">
+                  <Link href={service.href} className="block h-full">
                     <Image
                       src={service.image}
                       alt={service.name}
                       fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 60vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center">
-                        <Icon className="w-5 h-5 text-teal" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center">
+                          <Icon className="w-4 h-4 text-white" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white">
+                          {service.name}
+                        </h3>
                       </div>
-                      <h3 className="text-lg font-semibold text-charcoal">
-                        {service.name}
-                      </h3>
+                      <p className="text-white/70 text-sm leading-relaxed max-w-md">
+                        {service.description}
+                      </p>
+                      <span className="inline-flex items-center text-white font-medium gap-1.5 text-sm mt-3 group-hover:gap-2.5 transition-all">
+                        Learn More <ArrowRight className="w-4 h-4" />
+                      </span>
                     </div>
-                    <p className="text-muted mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    <Link
-                      href={service.href}
-                      className="inline-flex items-center text-teal font-medium group-hover:gap-2.5 transition-all gap-1.5 text-sm"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
+                  </Link>
                 </motion.div>
               );
             })}
@@ -353,7 +358,7 @@ export default function HomePage() {
           >
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
+                src="/why-choose-us.jpg"
                 alt="Professional renovation crew at work"
                 fill
                 className="object-cover"
@@ -519,7 +524,7 @@ export default function HomePage() {
               { step: "01", title: "Free Consultation", desc: "We visit your property, listen to your vision, and assess the scope of work — completely free, no pressure." },
               { step: "02", title: "Detailed Quote", desc: "You receive a transparent, itemized quote with material options, timelines, and no hidden costs." },
               { step: "03", title: "Expert Execution", desc: "Our experienced crews get to work on schedule, keeping you informed at every stage of the project." },
-              { step: "04", title: "Final Walkthrough", desc: "We do a thorough inspection together, handle any touch-ups, and make sure you're 100% satisfied." },
+              { step: "04", title: "Final Inspection", desc: "We do a thorough inspection together, handle any touch-ups, and make sure you're 100% satisfied." },
             ].map((item, i) => (
               <motion.div
                 key={item.step}
@@ -644,15 +649,15 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <Image
-              src="https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=800&q=80"
-              alt="Calgary skyline"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320009.0195036498!2d-114.31876508671875!3d51.02729579999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCalgary%2C%20AB!5e0!3m2!1sen!2sca!4v1710000000000"
+              className="absolute inset-0 w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="DHI Exteriors service area - Calgary, Alberta"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3">
+            <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3 pointer-events-none">
               <div className="text-charcoal font-bold text-lg">Calgary, Alberta</div>
               <div className="text-muted text-sm">& Surrounding Communities</div>
             </div>

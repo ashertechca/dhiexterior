@@ -114,7 +114,7 @@ const faqs = [
 export default function SidingAndEavesPage() {
   return (
     <ServicePageContent
-      heroImage="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+      heroImage="/medium-rain-gutter-system-for-the-roof-of-the-house.jpg"
       heroTag="Our Services"
       heroTitle={
         <>

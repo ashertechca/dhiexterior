@@ -34,11 +34,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/dhilogo.jpg"
+                src="/DHI-Exteriors-Dark.svg"
                 alt="DHI Exteriors"
                 width={140}
-                height={42}
-                className="h-9 w-auto rounded"
+                height={58}
+                className="h-9 w-auto"
               />
             </Link>
             <p className="text-[13px] font-light tracking-wide leading-relaxed text-white/70 mb-8">
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#D73C3C] mb-6">
+            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#EF5350] mb-6">
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#D73C3C] mb-6">
+            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#EF5350] mb-6">
               Services
             </h4>
             <ul className="space-y-3">
@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Contact & Hours */}
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#D73C3C] mb-6">
+            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#EF5350] mb-6">
               Contact
             </h4>
             <ul className="space-y-4 mb-8">
@@ -113,7 +113,7 @@ export default function Footer() {
                 >
                   <Phone
                     size={14}
-                    className="text-[#D73C3C] mt-0.5 shrink-0"
+                    className="text-[#EF5350] mt-0.5 shrink-0"
                   />
                   <span className="text-[13px] font-light tracking-wide text-white/70 group-hover:text-white transition-colors duration-300">
                     587-575-4832
@@ -127,7 +127,7 @@ export default function Footer() {
                 >
                   <Mail
                     size={14}
-                    className="text-[#D73C3C] mt-0.5 shrink-0"
+                    className="text-[#EF5350] mt-0.5 shrink-0"
                   />
                   <span className="text-[13px] font-light tracking-wide text-white/70 group-hover:text-white transition-colors duration-300">
                     clarence@dhiexteriors.com
@@ -137,7 +137,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin
                   size={14}
-                  className="text-[#D73C3C] mt-0.5 shrink-0"
+                  className="text-[#EF5350] mt-0.5 shrink-0"
                 />
                 <span className="text-[13px] font-light tracking-wide text-white/70">
                   Calgary, AB
@@ -146,7 +146,7 @@ export default function Footer() {
             </ul>
 
             {/* Business Hours */}
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#D73C3C] mb-4 flex items-center gap-2">
+            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#EF5350] mb-4 flex items-center gap-2">
               <Clock size={12} />
               Hours
             </h4>

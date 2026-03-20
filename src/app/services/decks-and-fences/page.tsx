@@ -114,7 +114,7 @@ const faqs = [
 export default function DecksAndFencesPage() {
   return (
     <ServicePageContent
-      heroImage="https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?w=1920&q=80"
+      heroImage="/deck-fence.png"
       heroTag="Our Services"
       heroTitle={
         <>

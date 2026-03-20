@@ -114,7 +114,7 @@ const faqs = [
 export default function PaintingPage() {
   return (
     <ServicePageContent
-      heroImage="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=80"
+      heroImage="/exterior-painting.png"
       heroTag="Our Services"
       heroTitle={
         <>

@@ -26,17 +26,7 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (mobileOpen) {
@@ -55,11 +45,7 @@ export default function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
       >
         {/* Top accent line */}
         <div className="h-[2px] bg-gradient-to-r from-transparent via-[#C62828] to-transparent" />
@@ -70,10 +56,10 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/dhilogo.jpg"
+                src="/DHI-Exteriors-Light.svg"
                 alt="DHI Exteriors"
                 width={160}
-                height={48}
+                height={66}
                 className="h-10 w-auto"
                 priority
               />
@@ -91,7 +77,7 @@ export default function Header() {
                   >
                     <Link
                       href={link.href}
-                      className={`flex items-center gap-1 px-4 py-2 text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 ${scrolled ? "text-[#4A5568] hover:text-[#1A1F2E]" : "text-white/90 hover:text-white"}`}
+                      className="flex items-center gap-1 px-4 py-2 text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 text-[#4A5568] hover:text-[#1A1F2E]"
                     >
                       {link.name}
                       <ChevronDown
@@ -138,7 +124,7 @@ export default function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`px-4 py-2 text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 ${scrolled ? "text-[#4A5568] hover:text-[#1A1F2E]" : "text-white/90 hover:text-white"}`}
+                    className="px-4 py-2 text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 text-[#4A5568] hover:text-[#1A1F2E]"
                   >
                     {link.name}
                   </Link>
@@ -150,9 +136,9 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-6">
               <a
                 href="tel:5875754832"
-                className={`flex items-center gap-2 transition-colors duration-300 ${scrolled ? "text-[#6B7280] hover:text-[#1A1F2E]" : "text-white/80 hover:text-white"}`}
+                className="flex items-center gap-2 transition-colors duration-300 text-[#6B7280] hover:text-[#1A1F2E]"
               >
-                <Phone size={14} className={scrolled ? "text-[#C62828]" : "text-white"} />
+                <Phone size={14} className="text-[#C62828]" />
                 <span className="text-[14px] font-semibold tracking-wide">
                   587-575-4832
                 </span>
@@ -169,7 +155,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`lg:hidden p-2 transition-colors ${scrolled ? "text-[#4A5568] hover:text-[#1A1F2E]" : "text-white/90 hover:text-white"}`}
+              className="lg:hidden p-2 transition-colors text-[#4A5568] hover:text-[#1A1F2E]"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -206,10 +192,10 @@ export default function Header() {
                 {/* Mobile Header */}
                 <div className="flex items-center justify-between mb-12">
                   <Image
-                    src="/dhilogo.jpg"
+                    src="/DHI-Exteriors-Light.svg"
                     alt="DHI Exteriors"
                     width={130}
-                    height={40}
+                    height={54}
                     className="h-8 w-auto"
                   />
                   <button
