@@ -320,7 +320,7 @@ export default function HomePage() {
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 60vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-9 h-9 rounded-lg bg-white/15 backdrop-blur-sm flex items-center justify-center">
@@ -330,7 +330,7 @@ export default function HomePage() {
                           {service.name}
                         </h3>
                       </div>
-                      <p className="text-white/70 text-sm leading-relaxed max-w-md">
+                      <p className="text-white/90 text-sm leading-relaxed max-w-md">
                         {service.description}
                       </p>
                       <span className="inline-flex items-center text-white font-medium gap-1.5 text-sm mt-3 group-hover:gap-2.5 transition-all">
