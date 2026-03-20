@@ -34,7 +34,7 @@ const testimonials = [
 const trustBadges = [
   { icon: Shield, label: "Licensed & Insured" },
   { icon: BadgeCheck, label: "BBB Accredited" },
-  { icon: Star, label: "Google 5-Star" },
+  { icon: Star, label: "Google Verified" },
   { icon: ThumbsUp, label: "HomeStars Verified" },
 ];
 
@@ -77,42 +77,9 @@ export default function TestimonialsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            4.8 out of 5 stars from our valued customers
+            Real stories from Calgary homeowners we&apos;ve served
           </motion.p>
         </div>
-      </section>
-
-      {/* Overall Rating */}
-      <section className="py-16 px-6 border-b border-black/[0.06]">
-        <motion.div
-          className="mx-auto max-w-3xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="glass-card inline-flex flex-col items-center px-12 py-8">
-            <div className="text-6xl font-bold text-gold font-display mb-3">
-              <AnimatedCounter value={4.8} decimals={1} />
-            </div>
-            <div className="flex items-center gap-1.5 mb-3">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 + i * 0.1, duration: 0.3 }}
-                >
-                  <Star className="w-6 h-6 fill-gold text-gold" />
-                </motion.div>
-              ))}
-            </div>
-            <p className="text-muted text-sm tracking-wide">
-              Based on verified customer reviews
-            </p>
-          </div>
-        </motion.div>
       </section>
 
       {/* Testimonial Cards */}
@@ -133,41 +100,23 @@ export default function TestimonialsPage() {
               <div className="relative z-10">
                 <Quote className="w-10 h-10 text-teal/10 mb-6" />
 
+                <div className="flex items-center gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <Star key={idx} className="w-5 h-5 fill-gold text-gold" />
+                  ))}
+                </div>
+
                 <blockquote className="text-charcoal text-lg md:text-xl leading-relaxed mb-8 font-light italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </blockquote>
 
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + idx * 0.08, duration: 0.3 }}
-                    >
-                      <Star className="w-5 h-5 fill-gold text-gold" />
-                    </motion.div>
-                  ))}
-                </div>
-
                 {/* Author */}
-                <div className="flex items-center gap-4">
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    width={48}
-                    height={48}
-                    className="rounded-full object-cover"
-                  />
-                  <div>
-                    <div className="font-semibold text-charcoal">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-muted text-sm tracking-wide">
-                      {testimonial.location}
-                    </div>
+                <div>
+                  <div className="font-semibold text-charcoal">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-muted text-sm tracking-wide">
+                    {testimonial.location}
                   </div>
                 </div>
               </div>
