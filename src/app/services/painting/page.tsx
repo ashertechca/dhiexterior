@@ -5,7 +5,7 @@ import ServicePageContent from "@/components/ServicePageContent";
 export const metadata: Metadata = {
   title: "Professional Painting Services Calgary | DHI Exteriors",
   description:
-    "Expert interior and exterior painting services in Calgary. Weather-resistant finishes, premium paint brands, colour consultation, and meticulous surface preparation. Over 20 years of experience. Get a free quote today.",
+    "Expert interior and exterior painting services in Calgary. Weather-resistant finishes, premium paint brands, colour consultation, and meticulous surface preparation. Over 30 years of experience. Get a free quote today.",
   openGraph: {
     title: "Professional Painting Services Calgary | DHI Exteriors",
     description:
@@ -121,7 +121,7 @@ export default function PaintingPage() {
           Professional <span className="text-[#E53935]">Painting Services</span> in Calgary
         </>
       }
-      heroDescription="Transform your home inside and out with DHI Exteriors' professional painting services. Over 20 years of delivering flawless, weather-resistant finishes across Calgary."
+      heroDescription="Transform your home inside and out with DHI Exteriors' professional painting services. Over 30 years of delivering flawless, weather-resistant finishes across Calgary."
       benefitsTag="Why Choose Us"
       benefitsTitle={
         <>

@@ -184,7 +184,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                Premium exterior renovations backed by 20+ years of craftsmanship.
+                Premium exterior renovations backed by 30+ years of craftsmanship.
                 We treat every home like it&apos;s our own.
               </motion.p>
 
@@ -224,7 +224,7 @@ export default function HomePage() {
                 <div className="h-5 w-px bg-[#1A1F2E]/10" />
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C62828]" />
-                  <span className="text-sm text-[#4A5568] font-medium">20+ Years Experience</span>
+                  <span className="text-sm text-[#4A5568] font-medium">30+ Years Experience</span>
                 </div>
               </motion.div>
             </motion.div>

@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Our Services | DHI Exteriors Calgary",
   description:
-    "DHI Exteriors offers professional painting, door & window installation, custom decks & fences, siding & eavestrough, and basement development services in Calgary. Over 20 years of trusted craftsmanship.",
+    "DHI Exteriors offers professional painting, door & window installation, custom decks & fences, siding & eavestrough, and basement development services in Calgary. Over 30 years of trusted craftsmanship.",
   openGraph: {
     title: "Our Services | DHI Exteriors Calgary",
     description:
@@ -89,7 +89,7 @@ export default function ServicesPage() {
             Our <span className="text-[#E53935]">Services</span>
           </h1>
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            With over 20 years of experience, DHI Exteriors delivers
+            With over 30 years of experience, DHI Exteriors delivers
             exceptional craftsmanship across every aspect of your home&apos;s
             exterior and interior.
           </p>

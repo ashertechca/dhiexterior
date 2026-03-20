@@ -21,7 +21,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "DHI Exteriors | Calgary's Premier Home Exterior Specialists",
   description:
-    "With over 20 years of experience, DHI Exteriors delivers exceptional craftsmanship in exterior and interior painting, siding installation, custom decks, doors, windows, and basement development across Calgary and surrounding areas.",
+    "With over 30 years of experience, DHI Exteriors delivers exceptional craftsmanship in exterior and interior painting, siding installation, custom decks, doors, windows, and basement development across Calgary and surrounding areas.",
   keywords: [
     "Calgary exterior painting",
     "Calgary siding installation",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DHI Exteriors | Calgary's Premier Home Exterior Specialists",
     description:
-      "Trusted by Calgary homeowners for 20+ years. Expert exterior painting, siding, decks, doors, windows, and basement development. Quality craftsmanship, lasting results.",
+      "Trusted by Calgary homeowners for 30+ years. Expert exterior painting, siding, decks, doors, windows, and basement development. Quality craftsmanship, lasting results.",
     url: "https://dhiexteriors.com",
     siteName: "DHI Exteriors",
     locale: "en_CA",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DHI Exteriors | Calgary's Premier Home Exterior Specialists",
     description:
-      "Trusted by Calgary homeowners for 20+ years. Expert exterior painting, siding, decks, doors, windows, and basement development.",
+      "Trusted by Calgary homeowners for 30+ years. Expert exterior painting, siding, decks, doors, windows, and basement development.",
   },
   robots: {
     index: true,
@@ -63,7 +63,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "DHI Exteriors",
   description:
-    "Calgary's premier home exterior specialists offering painting, siding, decks, doors, windows, and basement development with over 20 years of experience.",
+    "Calgary's premier home exterior specialists offering painting, siding, decks, doors, windows, and basement development with over 30 years of experience.",
   url: "https://dhiexteriors.com",
   telephone: "587-575-4832",
   email: "clarence@dhiexteriors.com",

@@ -121,7 +121,7 @@ export default function AboutPage() {
                 <p>
                   DHI Exteriors was founded with a simple mission — deliver
                   exceptional exterior renovation services with honest pricing and
-                  reliable timelines. Over 20 years later, DHI Exteriors has become
+                  reliable timelines. Over 30 years later, DHI Exteriors has become
                   one of Calgary&apos;s most trusted home exterior companies.
                 </p>
                 <p>

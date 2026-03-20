@@ -28,7 +28,7 @@ const benefits = [
   { title: "Free & No Obligation", desc: "Get a detailed quote with zero commitment required." },
   { title: "Response within 24 Hours", desc: "Our team will reach out promptly to discuss your project." },
   { title: "Detailed Written Estimate", desc: "Transparent pricing with a comprehensive breakdown." },
-  { title: "20+ Years Experience", desc: "Trusted Calgary expertise you can count on." },
+  { title: "30+ Years Experience", desc: "Trusted Calgary expertise you can count on." },
 ];
 
 export default function QuotePage() {
