@@ -382,7 +382,7 @@ export default function HomePage() {
                     <AnimatedCounter
                       value={stat.value}
                       suffix={stat.suffix}
-                      decimals={stat.decimals || 0}
+                      decimals={0}
                     />
                   </div>
                   <div className="text-muted text-[11px] mt-1">{stat.label}</div>
