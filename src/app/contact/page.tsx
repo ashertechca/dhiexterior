@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "587-575-4832",
+    value: "(587) 575-4832",
     href: "tel:5875754832",
   },
   {
@@ -173,11 +173,11 @@ export default function ContactPage() {
               ) : (
                 <>
                   <h2 className="text-2xl font-bold text-charcoal mb-2">
-                    Request a Free Quote
+                    Send Us a Message
                   </h2>
                   <p className="text-muted text-sm mb-8">
-                    Fill out the form below and we&apos;ll get back to you
-                    shortly.
+                    Have a question or want to discuss your project? Fill out
+                    the form below and we&apos;ll get back to you shortly.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -350,7 +350,7 @@ export default function ContactPage() {
                   href="tel:5875754832"
                   className="text-teal hover:text-teal-light transition-colors"
                 >
-                  587-575-4832
+                  (587) 575-4832
                 </a>
                 .
               </p>

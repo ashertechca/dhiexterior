@@ -185,7 +185,8 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 Premium exterior renovations backed by 30+ years of craftsmanship.
-                We treat every home like it&apos;s our own.
+                We treat every home like it&apos;s our own.{" "}
+                <Link href="/financing" className="text-[#C62828] font-semibold underline underline-offset-2 hover:text-[#9B1F1F] transition-colors">Financing available.</Link>
               </motion.p>
 
               <motion.div
@@ -194,23 +195,24 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
+                <a
+                  href="tel:5875754832"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#C62828] text-white font-semibold text-lg hover:bg-[#9B1F1F] transition-all shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call Now (587) 575-4832
+                </a>
                 <Link
                   href="/quote"
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#C62828] text-white font-semibold text-lg hover:bg-[#9B1F1F] transition-all shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1"
-                >
-                  Get Your Free Quote
-                </Link>
-                <Link
-                  href="/gallery"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-[#1A1F2E]/15 text-[#1A1F2E] font-semibold text-lg hover:border-[#1A1F2E]/30 hover:bg-[#1A1F2E]/5 transition-all"
                 >
-                  View Our Work
+                  Get a Free Quote
                 </Link>
               </motion.div>
 
               {/* Trust badges */}
               <motion.div
-                className="flex items-center gap-6 mt-12"
+                className="flex flex-wrap items-center gap-6 mt-12"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1 }}
@@ -226,6 +228,11 @@ export default function HomePage() {
                   <CheckCircle2 className="w-4 h-4 text-[#C62828]" />
                   <span className="text-sm text-[#4A5568] font-medium">30+ Years Experience</span>
                 </div>
+                <div className="h-5 w-px bg-[#1A1F2E]/10" />
+                <Link href="/financing" className="flex items-center gap-2 group">
+                  <CheckCircle2 className="w-4 h-4 text-[#C62828]" />
+                  <span className="text-sm text-[#4A5568] font-medium group-hover:text-[#C62828] transition-colors">Financing Available</span>
+                </Link>
               </motion.div>
             </motion.div>
 
@@ -368,7 +375,7 @@ export default function HomePage() {
             </div>
 
             {/* Stats overlay cards */}
-            <div className="absolute -bottom-6 -right-6 lg:-right-8 grid grid-cols-2 gap-3">
+            <div className="absolute -top-6 -left-6 lg:-left-8 grid grid-cols-2 gap-3">
               {[
                 { value: 30, suffix: "+", label: "Years Experience" },
                 { value: 500, suffix: "+", label: "Projects Done" },
@@ -527,6 +534,86 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== FINANCING BANNER ===== */}
+      <section className="py-24 px-6 bg-cream">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="bg-gradient-to-br from-[#1A1F2E] to-[#2D3348] rounded-2xl overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="p-10 md:p-14">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/80 text-sm font-medium mb-6">
+                  Powered by Financeit
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance">
+                  Affordable Financing for Your Renovation
+                </h2>
+                <p className="text-white/70 leading-relaxed mb-6">
+                  Don&apos;t let budget hold you back. With our Financeit partnership,
+                  you can transform your home with flexible monthly payments starting
+                  from <span className="text-white font-semibold">0% interest</span>.
+                  Get approved in seconds.
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {[
+                    { label: "No Money Down", icon: "dollar" },
+                    { label: "Rates from 0%", icon: "percent" },
+                    { label: "Approved in Seconds", icon: "clock" },
+                    { label: "Up to 60 Months", icon: "calendar" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#EF5350] shrink-0" />
+                      <span className="text-white/80 text-sm">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/financing"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-[#C62828] text-white font-semibold hover:bg-[#9B1F1F] transition-all hover:-translate-y-1 shadow-lg"
+                >
+                  Explore Financing Options <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="hidden lg:flex items-center justify-center p-10">
+                <div className="bg-white/10 border border-white/10 rounded-2xl p-8 max-w-sm w-full backdrop-blur-sm">
+                  <p className="text-white/50 text-xs uppercase tracking-wider mb-2">
+                    Example Payment
+                  </p>
+                  <p className="text-white text-lg font-medium mb-1">
+                    $25,000 Renovation
+                  </p>
+                  <div className="flex items-baseline gap-2 mb-4">
+                    <span className="text-5xl font-bold text-white">$483</span>
+                    <span className="text-white/60">/month</span>
+                  </div>
+                  <p className="text-white/40 text-xs mb-6">
+                    60 months at 6.99% APR. OAC.
+                  </p>
+                  <div className="space-y-3 pt-4 border-t border-white/10">
+                    <div className="flex items-center gap-2 text-white/70 text-sm">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#EF5350]" />
+                      No prepayment penalties
+                    </div>
+                    <div className="flex items-center gap-2 text-white/70 text-sm">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#EF5350]" />
+                      Weekly, bi-weekly, or monthly
+                    </div>
+                    <div className="flex items-center gap-2 text-white/70 text-sm">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#EF5350]" />
+                      Apply online in minutes
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ===== FEATURED PROJECTS ===== */}
       <section className="py-24 px-6 bg-cream">
         <div className="max-w-6xl mx-auto">
@@ -671,8 +758,11 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white text-balance">
             Ready to Transform Your Home?
           </h2>
-          <p className="text-xl text-white/80 mb-10">
+          <p className="text-xl text-white/80 mb-3">
             Get a free, no-obligation quote today
+          </p>
+          <p className="text-white/60 mb-10">
+            Flexible financing available — 0% interest plans, no money down, approved in seconds
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -686,7 +776,7 @@ export default function HomePage() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-white/40 text-white font-semibold text-lg hover:border-white/70 hover:bg-white/10 transition-all"
             >
               <Phone className="w-5 h-5" />
-              Call 587-575-4832
+              Call (587) 575-4832
             </a>
           </div>
         </motion.div>

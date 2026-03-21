@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
+  { name: "Financing", href: "/financing" },
   { name: "Gallery", href: "/gallery" },
   { name: "Testimonials", href: "/testimonials" },
   { name: "Contact", href: "/contact" },
@@ -116,7 +117,7 @@ export default function Footer() {
                     className="text-[#EF5350] mt-0.5 shrink-0"
                   />
                   <span className="text-[13px] font-light tracking-wide text-white/70 group-hover:text-white transition-colors duration-300">
-                    587-575-4832
+                    (587) 575-4832
                   </span>
                 </a>
               </li>

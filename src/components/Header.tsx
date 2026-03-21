@@ -4,8 +4,16 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Shield, Award, Clock, CreditCard, Star } from "lucide-react";
 import ScrollProgress from "./ScrollProgress";
+
+const trustItems = [
+  { icon: Clock, label: "30+ Years Experience" },
+  { icon: Award, label: "500+ Projects Completed" },
+  { icon: Shield, label: "Licensed & Fully Insured" },
+  { icon: Star, label: "5-Star Rated" },
+  { icon: CreditCard, label: "0% Financing Available", href: "/financing" },
+];
 
 const services = [
   { name: "Painting", href: "/services/painting" },
@@ -18,6 +26,7 @@ const services = [
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services", hasDropdown: true },
+  { name: "Financing", href: "/financing" },
   { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
   { name: "Testimonials", href: "/testimonials" },
@@ -47,7 +56,28 @@ export default function Header() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm"
       >
-        {/* Top accent line */}
+        {/* Trust Bar */}
+        <div className="hidden lg:block bg-[#1A1F2E]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-2">
+            <div className="flex items-center justify-center gap-x-8">
+              {trustItems.map((item) => {
+                const Icon = item.icon;
+                const content = (
+                  <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.08em] uppercase text-white/70 hover:text-white transition-colors duration-300">
+                    <Icon className="w-3 h-3 text-[#EF5350] shrink-0" />
+                    {item.label}
+                  </span>
+                );
+                return item.href ? (
+                  <Link key={item.label} href={item.href}>{content}</Link>
+                ) : (
+                  <span key={item.label}>{content}</span>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        {/* Accent line */}
         <div className="h-[2px] bg-gradient-to-r from-transparent via-[#C62828] to-transparent" />
         <ScrollProgress />
 
@@ -77,7 +107,7 @@ export default function Header() {
                   >
                     <Link
                       href={link.href}
-                      className="flex items-center gap-1 px-4 py-2 text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 text-[#4A5568] hover:text-[#1A1F2E]"
+                      className="flex items-center gap-1 px-3 py-2 text-[11px] font-light tracking-[0.12em] uppercase transition-colors duration-300 text-[#4A5568] hover:text-[#1A1F2E]"
                     >
                       {link.name}
                       <ChevronDown
@@ -124,7 +154,7 @@ export default function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="px-4 py-2 text-[13px] font-light tracking-[0.15em] uppercase transition-colors duration-300 text-[#4A5568] hover:text-[#1A1F2E]"
+                    className="px-3 py-2 text-[11px] font-light tracking-[0.12em] uppercase transition-colors duration-300 text-[#4A5568] hover:text-[#1A1F2E]"
                   >
                     {link.name}
                   </Link>
@@ -140,12 +170,12 @@ export default function Header() {
               >
                 <Phone size={14} className="text-[#C62828]" />
                 <span className="text-[14px] font-semibold tracking-wide">
-                  587-575-4832
+                  (587) 575-4832
                 </span>
               </a>
 
               <Link
-                href="/contact"
+                href="/quote"
                 className="relative group px-6 py-2.5 text-[12px] font-medium tracking-[0.2em] uppercase text-white bg-[#C62828] rounded-lg hover:bg-[#9B1F1F] transition-all duration-300 shadow-sm"
               >
                 <span className="relative z-10">Get a Free Quote</span>
@@ -280,12 +310,12 @@ export default function Header() {
                   >
                     <Phone size={16} className="text-[#C62828]" />
                     <span className="text-sm font-light tracking-wider">
-                      587-575-4832
+                      (587) 575-4832
                     </span>
                   </a>
 
                   <Link
-                    href="/contact"
+                    href="/quote"
                     onClick={() => setMobileOpen(false)}
                     className="block w-full text-center px-6 py-3.5 text-[12px] font-medium tracking-[0.2em] uppercase text-white bg-[#C62828] rounded-lg hover:bg-[#9B1F1F] transition-all duration-300"
                   >

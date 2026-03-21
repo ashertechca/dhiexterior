@@ -422,10 +422,10 @@ export default function BookingPage() {
                     <div>
                       <p className="text-[#1A1F2E] font-medium">Phone</p>
                       <a
-                        href="tel:587-575-4832"
+                        href="tel:5875754832"
                         className="text-sm text-[#8E712F] hover:text-[#8E712F]/80 transition-colors"
                       >
-                        587-575-4832
+                        (587) 575-4832
                       </a>
                     </div>
                   </div>

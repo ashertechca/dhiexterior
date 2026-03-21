@@ -14,14 +14,19 @@ import {
   MessageSquare,
   Home,
   Wrench,
+  Paintbrush,
+  DoorOpen,
+  Fence,
+  PanelTop,
+  HardHat,
 } from "lucide-react";
 
 const services = [
-  { id: "painting", label: "Painting", icon: "🎨" },
-  { id: "doors-windows", label: "Doors & Windows", icon: "🚪" },
-  { id: "decks-fences", label: "Decks & Fences", icon: "🏗️" },
-  { id: "siding-eaves", label: "Siding & Eaves", icon: "🏠" },
-  { id: "basement", label: "Basement Development", icon: "🔨" },
+  { id: "painting", label: "Painting", icon: Paintbrush },
+  { id: "doors-windows", label: "Doors & Windows", icon: DoorOpen },
+  { id: "decks-fences", label: "Decks & Fences", icon: Fence },
+  { id: "siding-eaves", label: "Siding & Eaves", icon: PanelTop },
+  { id: "basement", label: "Basement Development", icon: HardHat },
 ];
 
 const benefits = [
@@ -214,7 +219,11 @@ export default function QuotePage() {
                             <CheckCircle className="w-4 h-4 text-white" />
                           )}
                         </div>
-                        <span className="text-2xl">{service.icon}</span>
+                        <service.icon className={`w-5 h-5 ${
+                          selectedServices.includes(service.id)
+                            ? "text-[#C62828]"
+                            : "text-[#6B7280]"
+                        }`} />
                         <span className="text-[#1A1F2E] font-medium text-lg">
                           {service.label}
                         </span>
@@ -449,11 +458,11 @@ export default function QuotePage() {
               <div className="mt-8 pt-6 border-t border-black/[0.06]">
                 <p className="text-sm text-[#9CA3AF] mb-3">Prefer to call?</p>
                 <a
-                  href="tel:587-575-4832"
+                  href="tel:5875754832"
                   className="flex items-center gap-3 text-[#8E712F] font-semibold text-lg hover:text-[#8E712F]/80 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  587-575-4832
+                  (587) 575-4832
                 </a>
               </div>
             </div>

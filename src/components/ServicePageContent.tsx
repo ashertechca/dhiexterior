@@ -378,15 +378,26 @@ export default function ServicePageContent({
           transition={{ duration: 0.5 }}
         >
           <h2 className="mb-6 text-white">{ctaTitle}</h2>
-          <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">
+          <p className="text-white/80 text-lg mb-4 max-w-xl mx-auto">
             {ctaDescription}
           </p>
-          <Link
-            href="/quote"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white text-[#C62828] font-semibold text-lg hover:bg-gray-50 transition-all hover:-translate-y-1 shadow-lg"
-          >
-            Get Your Free Quote <ArrowRight className="w-4 h-4" />
-          </Link>
+          <p className="text-white/60 text-sm mb-10 max-w-lg mx-auto">
+            Flexible financing available through Financeit — 0% interest plans, no money down, approved in seconds.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/quote"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white text-[#C62828] font-semibold text-lg hover:bg-gray-50 transition-all hover:-translate-y-1 shadow-lg"
+            >
+              Get Your Free Quote <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/financing"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-white/40 text-white font-semibold text-lg hover:border-white/70 hover:bg-white/10 transition-all"
+            >
+              Explore Financing
+            </Link>
+          </div>
         </motion.div>
       </section>
     </main>

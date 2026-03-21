@@ -65,7 +65,7 @@ const jsonLd = {
   description:
     "Calgary's premier home exterior specialists offering painting, siding, decks, doors, windows, and basement development with over 30 years of experience.",
   url: "https://dhiexteriors.com",
-  telephone: "587-575-4832",
+  telephone: "(587) 575-4832",
   email: "clarence@dhiexteriors.com",
   address: {
     "@type": "PostalAddress",
