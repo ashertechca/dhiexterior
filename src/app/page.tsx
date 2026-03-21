@@ -158,7 +158,7 @@ export default function HomePage() {
                 transition={{ duration: 0.7, delay: 0.4 }}
               >
                 <span>Transforming Homes with</span>
-                <span className="relative flex w-full justify-start overflow-hidden md:pb-4 md:pt-1">
+                <span className="relative flex w-full justify-start overflow-hidden pb-3 pt-1 md:pb-4 md:pt-1">
                   &nbsp;
                   {titles.map((title, index) => (
                     <motion.span
